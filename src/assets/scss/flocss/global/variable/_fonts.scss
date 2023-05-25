@@ -1,0 +1,22 @@
+// Bon Vivant
+@font-face {
+  font-family: 'Montserrat';
+  font-style: light;
+  font-weight: normal;
+  src: url(/fonts/Montserrat-Light.woff2) format('woff2');
+  src: url(/fonts/Montserrat-Light.woff) format('woff');
+}
+
+// 和文フォント
+$Yu-Gothic: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic';
+
+// 欧文フォント
+$Montserrat: 'Montserrat';
+
+// サブフォント
+$sans-serif: 'Helvetica Neue', arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', meiryo, sans-serif;
+$serif: '游明朝', yumincho, 'Hiragino Mincho ProN W3', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', 'ＭＳ 明朝',
+  serif;
+
+$font-jp: $Yu-Gothic, $sans-serif;
+$font-en-primary: $Montserrat, $sans-serif;
