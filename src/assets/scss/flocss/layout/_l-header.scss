@@ -1,0 +1,63 @@
+@use '../global' as *;
+
+/**
+ * l-header
+ */
+
+.l-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: $header-z-index;
+  width: 100%;
+  color: $text-color-100;
+  background-color: $base-color-300;
+}
+
+.l-header__inner {
+  width: min(100% - 6vw, 88vw);
+  max-width: 1280px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  margin-right: auto;
+  margin-left: auto;
+  @include flex(space-between, center);
+}
+
+.l-header__logo {
+  a {
+    transition: opacity $transition;
+    @include hover(true) {
+      opacity: $opacity;
+    }
+  }
+  @include mq(mobile) {
+    width: 70px;
+    height: auto;
+  }
+}
+
+.l-header__logo-link {
+  display: block;
+}
+
+.l-header__nav {
+  @include flex($align-items: center);
+}
+
+.l-header__nav-item + .l-header__nav-item {
+  margin-left: 20px;
+}
+
+.l-header__nav-link {
+  transition: opacity $transition;
+  @include hover(true) {
+    opacity: $opacity;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
