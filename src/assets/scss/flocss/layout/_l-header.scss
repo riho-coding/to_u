@@ -22,6 +22,10 @@
   margin-right: auto;
   margin-left: auto;
   @include flex(space-between, center);
+  @include mq(mobile) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .l-header__logo {
