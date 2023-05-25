@@ -9,6 +9,10 @@
   padding-bottom: 60px;
   background: url(/img/bg_shadow.jpg) no-repeat;
   background-size: cover;
+  @include mq(mobile) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .p-index-campaign__inner {
@@ -22,13 +26,17 @@
 
   &::before {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     display: inline-block;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: calc(100% - 10px * 2);
+    height: calc(100% - 10px * 2);
     content: '';
     border: 1px solid $main-color-300;
+  }
+
+  @include mq(mobile) {
+    padding: 46px;
   }
 }
 
@@ -37,15 +45,28 @@
 }
 
 .p-index-campaign__price {
-  position: relative;
+  // position: relative;
   line-height: 1;
 
   @include flex(center, flex-end);
 
+  @include mq(mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.p-index-campaign__normal-price {
+  position: relative;
+  padding-top: 58px;
+  padding-right: 50px;
+  font-size: fluid(64, 80);
+  color: $base-color-100;
+
   &::before {
     position: absolute;
+    right: 10px;
     bottom: 40px;
-    left: 362px;
     display: inline-block;
     width: 24px;
     height: 40px;
@@ -53,14 +74,13 @@
     content: '';
     background-color: $main-color-300;
   }
-}
-
-.p-index-campaign__normal-price {
-  position: relative;
-  padding-top: 58px;
-  padding-right: 56px;
-  font-size: rem(80);
-  color: $base-color-100;
+  @include mq(mobile) {
+    &::before {
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
 
   > span {
     display: inline-block;
@@ -71,13 +91,21 @@
     top: 0;
     left: 4px;
     font-size: rem(34);
+    @include mq(mobile) {
+      font-size: rem(18);
+    }
   }
 
   > span.-shipping-fee {
     position: absolute;
     top: 14px;
     left: 144px;
-    font-size: fluid(14, 20);
+    font-size: rem(20);
+    @include mq(mobile) {
+      top: 3px;
+      left: 80px;
+      font-size: rem(14);
+    }
   }
 
   > span.-yen {
@@ -91,21 +119,35 @@
 
   &::after {
     position: absolute;
-    bottom: 50px;
+    bottom: 36px;
     left: -4px;
     display: inline-block;
-    width: fluid(200, 254);
+    width: fluid(180, 254);
     height: 5px;
     content: '';
     background-color: $accent-color-primary;
     transform: rotate(-16deg);
+  }
+
+  @include mq(mobile) {
+    padding-top: 24px;
+    padding-right: 0;
+    font-size: rem(50);
+    letter-spacing: -0.02em;
+  }
+
+  @include mq(mobile) {
+    &::after {
+      bottom: 22px;
+      width: 152px;
+    }
   }
 }
 
 .p-index-campaign__limited-price {
   position: relative;
   padding-top: 40px;
-  font-size: fluid(80, 150);
+  font-size: fluid(64, 150);
   color: $main-color-300;
 
   > span.-tax {
@@ -122,13 +164,22 @@
   &::after {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -3%;
     display: inline-block;
     width: 72px;
     height: 72px;
     content: '';
     background: url(/img/campaign_point.png) no-repeat;
     background-size: contain;
+  }
+  @include mq(mobile) {
+    padding-top: 30px;
+    margin-top: 42px;
+
+    &::after {
+      top: -16px;
+      right: -28px;
+    }
   }
 }
 
@@ -144,6 +195,14 @@
   margin-right: auto;
   margin-left: auto;
   border: 1px solid $main-color-300;
+  @include mq(mobile) {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border: none;
+    border-top: 1px solid $main-color-300;
+  }
 }
 
 .p-index-campaign__set-name {
@@ -164,6 +223,11 @@
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   @include flex(center);
+  @include mq(mobile) {
+    grid-row: auto;
+    grid-column: auto;
+    margin-right: auto;
+  }
 }
 
 .p-index-campaign__set-item {
@@ -197,6 +261,15 @@
   line-height: 1;
   vertical-align: bottom;
   background: linear-gradient(transparent 50%, $main-color-200 50%) no-repeat;
+  @include mq(mobile) {
+    display: block;
+    grid-row: auto;
+    grid-column: auto;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: rem(16);
+  }
 }
 
 .p-index-campaign__set-img {
@@ -207,12 +280,32 @@
   img {
     width: 100%;
   }
+  @include mq(mobile) {
+    grid-row: auto;
+    grid-column: auto;
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .p-index-campaign__foot {
   margin-top: 50px;
   @include flex(center, center);
+
+  @include mq(mobile) {
+    margin-top: 10px;
+  }
 }
 
 .p-index-campaign__btn {
+  @include mq(mobile) {
+    padding: 23px 50px 23px 14px;
+    margin-right: -18px;
+    margin-left: -18px;
+
+    &::before {
+      right: 10px;
+    }
+  }
 }
