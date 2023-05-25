@@ -121,5 +121,33 @@ block main
 							dd.p-index-news__title サイトオープンしました。
 				a.p-index-news__btn.c-btn(href="/") お知らせ一覧はこちら
 
+		//- Campaign
+		section.p-index-campaign
+			.p-index-campaign__inner
+				h2.c-title--center 初回限定価格
+				.p-index-campaign__head
+					.p-index-campaign__price
+						.p-index-campaign__normal-price
+							span.-title 通常価格
+							span.-shipping-fee （送料別）
+							| 9,800
+							span.-yen 円
+							span.-tax （税込）
+						.p-index-campaign__limited-price
+							span.-tax 税込
+							| 4,980
+							span.-yen 円
+				.p-index-campaign__body
+					span.p-index-campaign__set-name セット内容
+					ul.p-index-campaign__set-items
+						li.p-index-campaign__set-item 化粧水 200ml 1本
+						li.p-index-campaign__set-item 美容クリーム 60g 1個
+						li.p-index-campaign__set-item 乳液 90g 1本
+					span.p-index-campaign__set-text さらに！30日間全額返金保証付き
+					figure.p-index-campaign__set-img
+						img(src=[path] + "img/campaign_index.jpg" alt="初回限定セットの内容（化粧水200ml、美容クリーム60g、乳液90g）" width="3" height="2" decoding="async" loading="lazy")
+				.p-index-campaign__foot
+					a.p-index-campaign__btn.c-btn(href="/") 無料パーソナル診断を受けてみる
+
 block script
 	script(src=[path]+"js/main.bundle.js")
