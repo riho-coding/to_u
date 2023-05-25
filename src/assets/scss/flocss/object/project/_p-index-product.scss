@@ -7,6 +7,10 @@
 .p-index-product {
   padding-top: 60px;
   padding-bottom: 120px;
+  @include mq(mobile) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 }
 
 .p-index-product__inner {
