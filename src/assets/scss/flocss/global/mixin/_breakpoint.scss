@@ -1,0 +1,15 @@
+@use '../variable' as *;
+@use '../function' as *;
+
+// ブレイクポイント
+$breakpoints: (
+  mobile: 'screen and (max-width: 899px)',
+  pc: 'screen and (min-width: 900px)',
+);
+
+// mixin
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
