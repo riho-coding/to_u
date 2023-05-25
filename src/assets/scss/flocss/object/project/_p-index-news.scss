@@ -7,6 +7,10 @@
 .p-index-news {
   padding-top: 120px;
   padding-bottom: 120px;
+  @include mq(mobile) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .p-index-news__inner {
@@ -14,6 +18,9 @@
   max-width: 940px;
   margin-right: auto;
   margin-left: auto;
+  @include mq(mobile) {
+    width: calc(100% - 12.5vw);
+  }
 }
 
 .p-index-news__list {
@@ -31,6 +38,10 @@
   @include hover(true) {
     background-color: $main-color-100;
   }
+  @include mq(mobile) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .p-index-news__date {
@@ -40,6 +51,12 @@
   font-size: fluid(14, 16);
   font-weight: 500;
   text-align: center;
+  @include mq(mobile) {
+    width: auto;
+    padding-right: 16px;
+    padding-left: 0;
+    text-align: left;
+  }
 }
 
 .p-index-news__title {
@@ -51,4 +68,7 @@
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
+  @include mq(mobile) {
+    margin-top: 50px;
+  }
 }
