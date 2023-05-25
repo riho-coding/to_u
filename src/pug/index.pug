@@ -1,0 +1,27 @@
+//- index.pug
+
+extends ./layout/_template
+
+block variable
+	- const page = 'home';
+	- const path = "/";
+
+block main
+	main.l-home
+		//- FV
+		section.p-index-fv
+			.p-index-fv__inner
+				.p-index-fv__content
+					h2.p-index-fv__copy わたし史上
+						br
+						| いちばん輝く素肌。
+					p.p-index-fv__sub-copy 肌質・体質に合わせたパーソナライズスキンケア
+					a.p-index-fv__btn.c-btn(href="/") 無料パーソナル診断を受けてみる
+				a.p-index-fv__cta-btn(href="/")
+					span.p-index-fv__cta-title 無料パーソナル診断実施中
+					span.p-index-fv__cta-text 10,000通りの中からあなたに
+						br
+						| ぴったりのスキンケアをご提案します
+
+block script
+	script(src=[path]+"js/main.bundle.js")
