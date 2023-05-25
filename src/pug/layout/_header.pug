@@ -1,0 +1,22 @@
+//- layout/_header.pug
+
+header.l-header
+	.l-header__inner
+		if page == "home"
+			h1.l-header__logo
+				a.l-header__logo-link(href="/")
+					img(src=[path] + "img/logo.png" alt="To U" width="101" height="30" decoding="async" loading="lazy")
+		else if page !== "home"
+			p.l-header__logo
+				a.l-header__logo-link(href="/")
+					img(src=[path] + "img/logo.png" alt="To U" width="101" height="30" decoding="async" loading="lazy")
+
+		ul.l-header__nav
+			li.l-header__nav-item
+				a.l-header__nav-link(href="/")
+					span.u-visibility-hidden マイページを見る
+					img(src=[path] + "img/icon_mypage.svg" alt="マイページを見る" width="1" height="1" decoding="async" loading="lazy")
+			li.l-header__nav-item
+				a.l-header__nav-link(href="/")
+					span.u-visibility-hidden カートを見る
+					img(src=[path] + "img/icon_cart.svg" alt="カートを見る" width="1" height="1" decoding="async" loading="lazy")
