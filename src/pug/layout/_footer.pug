@@ -1,0 +1,33 @@
+//- layout/_footer.pug
+
+footer.l-footer
+	.l-footer__inner
+		.l-footer__head
+			h1.l-footer__logo
+				a.l-footer__logo-link(href="/")
+					img(src=[path] + "img/logo_white.png" alt="To U" width="101" height="30" decoding="async" loading="lazy")
+			nav.l-footer__nav-area
+				ul.l-footer__nav
+					li.l-footer__nav-item
+						a.l-footer__nav-link(href="/") マイページ
+					li.l-footer__nav-item
+						a.l-footer__nav-link(href="/") よくある質問
+					li.l-footer__nav-item
+						a.l-footer__nav-link(href="/") 会社概要
+					li.l-footer__nav-item
+						a.l-footer__nav-link(href="/") お問い合わせ
+			ul.l-footer__sns-nav
+				li.l-footer__sns-item
+					a.l-footer__sns-link(href="/" target="_blank" rel="noreferrer")
+						span.u-visibility-hidden 公式Twitterを見る
+						img(src=[path] + "img/icon_twitter.svg" alt="Twitterのアイコン" width="1" height="1" decoding="async" loading="lazy")
+				li.l-footer__sns-item
+					a.l-footer__sns-link(href="/" target="_blank" rel="noreferrer")
+						span.u-visibility-hidden 公式Facebookを見る
+						img(src=[path] + "img/icon_facebook.svg" alt="Facebookのアイコン" width="1" height="1" decoding="async" loading="lazy")
+				li.l-footer__sns-item
+					a.l-footer__sns-link(href="/" target="_blank" rel="noreferrer")
+						span.u-visibility-hidden 公式Instagramを見る
+						img(src=[path] + "img/icon_instagram.svg" alt="Instagramのアイコン" width="1" height="1" decoding="async" loading="lazy")
+		.l-footer__foot
+			p.l-footer__copyright.u-uppercase ©︎to u
