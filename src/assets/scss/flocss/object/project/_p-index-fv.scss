@@ -1,0 +1,108 @@
+@use '../../global' as *;
+
+/**
+ * p-index-fv
+ */
+
+.p-index-fv {
+  position: relative;
+  min-height: 820px;
+  background: url(/img/bg_shadow_blue.jpg) no-repeat center center;
+  background-size: cover;
+  @include flex(center, center);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 64%;
+    height: 100%;
+    content: '';
+    background: url(/img/fv_index.jpg) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.p-index-fv__inner {
+  width: calc(100% - 12.5vw);
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-index-fv__content {
+  position: relative;
+  z-index: calc($main-z-index + 1);
+  width: fit-content;
+}
+
+.p-index-fv__copy {
+  font-size: rem(50);
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+}
+
+.p-index-fv__sub-copy {
+  margin-top: 40px;
+  font-size: rem(24);
+  line-height: 1;
+}
+
+.p-index-fv__btn {
+  margin-top: 46px;
+}
+
+.p-index-fv__cta-btn {
+  position: absolute;
+  right: 0;
+  bottom: 46px;
+  z-index: calc($main-z-index + 1);
+  display: block;
+  width: 388px;
+  padding: 28px 30px;
+  cursor: pointer;
+  background-color: $main-color-100;
+  transition: transform $transition;
+
+  &::before {
+    position: absolute;
+    top: -40px;
+    left: -28px;
+    z-index: calc($main-z-index + 2);
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    content: '';
+    background: url(/img/cta_point.png) no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    z-index: calc($main-z-index + 2);
+    display: inline-block;
+    width: 70px;
+    height: 128px;
+    content: '';
+    background: url(/img/cta_mobile.png) no-repeat;
+    background-size: contain;
+  }
+  @include hover(true) {
+    transform: translateY(-14px);
+  }
+}
+
+.p-index-fv__cta-title {
+  display: inline-block;
+  font-size: rem(18);
+}
+
+.p-index-fv__cta-text {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: rem(14);
+}
