@@ -14,6 +14,11 @@
   cursor: pointer;
   background-color: $main-color-300;
   @include flex($align-items: center);
+  @include mq(mobile) {
+    min-width: 100%;
+    padding-right: 70px;
+    font-size: rem(14);
+  }
 
   &::before {
     position: absolute;
@@ -30,6 +35,16 @@
   @include hover(true) {
     &::before {
       transform: translateX(8px);
+    }
+  }
+  @include mq(mobile) {
+    &::before {
+      top: 45%;
+      right: 25px;
+      width: 30px;
+      height: 6px;
+      background: url(/img/btn_arrow_mobile.png) no-repeat;
+      background-size: contain;
     }
   }
 }
