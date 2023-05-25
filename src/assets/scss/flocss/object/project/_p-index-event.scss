@@ -1,0 +1,86 @@
+@use '../../global' as *;
+
+/**
+ * p-index-event
+ */
+
+.p-index-event {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $main-color-100;
+}
+
+.p-index-event__outer {
+  width: calc(100% - 22.5vw);
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.p-index-event__inner {
+  padding: 70px 60px;
+  background-color: $base-color-300;
+}
+
+.p-index-event__step-list {
+  @include flex(space-between, stretch);
+
+  margin-top: 20px;
+}
+
+.p-index-event__step-item + .p-index-event__step-item {
+  position: relative;
+  margin-left: 80px;
+
+  &::before {
+    position: absolute;
+    top: 130px;
+    left: -50px;
+    display: inline-block;
+    width: 24px;
+    height: 40px;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    content: '';
+    background-color: $main-color-300;
+  }
+}
+
+.p-index-event__step-head {
+  position: relative;
+  padding-top: 70px;
+  @include flex(center, center);
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-family: $font-en-primary;
+    font-size: rem(70);
+    color: $main-color-300;
+    content: attr(data-number);
+  }
+}
+
+.p-index-event__step-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: rem(20);
+  text-align: center;
+}
+
+.p-index-event__step-foot {
+  font-size: fluid(14, 16);
+  line-height: 1.5;
+  color: $text-color-200;
+}
+
+.p-index-event__btn {
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
