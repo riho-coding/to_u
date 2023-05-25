@@ -8,23 +8,39 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $main-color-100;
+  @include mq(mobile) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .p-index-event__outer {
   width: calc(100% - 22.5vw);
   max-width: 940px;
   margin-inline: auto;
+  @include mq(mobile) {
+    width: calc(100% - 12.5vw);
+  }
 }
 
 .p-index-event__inner {
   padding: 70px 60px;
   background-color: $base-color-300;
+  @include mq(mobile) {
+    padding: 50px 10px;
+  }
 }
 
 .p-index-event__step-list {
   @include flex(space-between, stretch);
 
   margin-top: 20px;
+  @include mq(mobile) {
+    flex-direction: column;
+    padding-right: 38px;
+    padding-left: 38px;
+    margin-top: 0;
+  }
 }
 
 .p-index-event__step-item + .p-index-event__step-item {
@@ -41,6 +57,17 @@
     clip-path: polygon(100% 50%, 0 0, 0 100%);
     content: '';
     background-color: $main-color-300;
+  }
+
+  @include mq(mobile) {
+    margin-top: 90px;
+    margin-left: 0;
+
+    &::before {
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
   }
 }
 
