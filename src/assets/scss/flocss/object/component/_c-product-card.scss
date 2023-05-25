@@ -1,0 +1,90 @@
+@use '../../global' as *;
+
+/**
+ * c-product-card
+ */
+
+.c-product-card {
+  @include flex(space-between, stretch);
+
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.c-product-card__head {
+}
+
+.c-product-card__thumbnail {
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-product-card__title {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: fluid(20, 22);
+  line-height: 1;
+  text-align: center;
+}
+
+.c-product-card__body {
+  padding-bottom: 40px;
+}
+
+.c-product-card__description {
+  font-size: fluid(14, 16);
+  line-height: 1.3;
+}
+
+.c-product-card__detail {
+  display: block;
+  padding-top: 20px;
+
+  > span {
+    display: inline-block;
+    font-size: fluid(14, 15);
+    line-height: 1;
+  }
+
+  > span + span {
+    margin-left: 10px;
+  }
+}
+
+.c-product-card__btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 24px 100px 24px 24px;
+  font-size: rem(16);
+  line-height: 1;
+  color: $base-color-300;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  background-color: $main-color-300;
+  @include flex($align-items: center);
+
+  &::before {
+    position: absolute;
+    top: 40%;
+    right: 24px;
+    display: block;
+    width: 56px;
+    height: 8px;
+    content: '';
+    background: url(/img/btn_arrow.png) no-repeat;
+    background-size: contain;
+    transition: transform $transition;
+  }
+  @include hover(true) {
+    &::before {
+      transform: translateX(8px);
+    }
+  }
+}

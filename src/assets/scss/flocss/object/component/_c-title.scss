@@ -1,0 +1,41 @@
+@use '../../global' as *;
+
+/**
+ * c-title
+ */
+
+%c-title {
+  position: relative;
+  padding-bottom: 44px;
+  font-size: fluid(24, 34);
+  line-height: 1;
+
+  &::after {
+    position: absolute;
+    bottom: 22px;
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    content: '';
+    background-color: $main-color-300;
+  }
+}
+
+.c-title--left {
+  @extend %c-title;
+
+  &::after {
+    left: 0;
+  }
+}
+
+.c-title--center {
+  @extend %c-title;
+
+  text-align: center;
+
+  &::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

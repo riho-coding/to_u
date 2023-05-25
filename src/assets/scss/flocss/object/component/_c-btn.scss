@@ -1,0 +1,35 @@
+@use '../../global' as *;
+
+/**
+ * c-btn
+ */
+
+.c-btn {
+  position: relative;
+  width: fit-content;
+  padding: 24px 100px 24px 24px;
+  font-size: rem(20);
+  line-height: 1;
+  color: $base-color-300;
+  cursor: pointer;
+  background-color: $main-color-300;
+  @include flex($align-items: center);
+
+  &::before {
+    position: absolute;
+    top: 40%;
+    right: 24px;
+    display: block;
+    width: 56px;
+    height: 8px;
+    content: '';
+    background: url(/img/btn_arrow.png) no-repeat;
+    background-size: contain;
+    transition: transform $transition;
+  }
+  @include hover(true) {
+    &::before {
+      transform: translateX(8px);
+    }
+  }
+}
