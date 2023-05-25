@@ -1,0 +1,52 @@
+@use '../../global' as *;
+
+/**
+ * c-cta-banner-mobile
+ */
+
+.c-cta-banner-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main-color-100;
+
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.c-cta-banner-mobile__link {
+  position: relative;
+  width: calc(100% - 12.5vw);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  @include flex($align-items: center);
+
+  &::before {
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    content: '';
+    background: url(/img/cta_point.png) no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 12px;
+    content: '';
+    background: url(/img/cta_arrow.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.c-cta-banner-mobile__text {
+  display: inline-block;
+  padding-left: 18px;
+  font-size: rem(18);
+}
