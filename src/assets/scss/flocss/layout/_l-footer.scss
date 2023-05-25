@@ -9,6 +9,10 @@
   padding-bottom: 30px;
   color: $base-color-300;
   background-color: $base-color-100;
+  @include mq(mobile) {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
 }
 
 .l-footer__inner {
@@ -20,6 +24,10 @@
 
 .l-footer__head {
   @include flex(space-between, center);
+  @include mq(mobile) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .l-footer__logo-link {
@@ -32,14 +40,25 @@
 .l-footer__nav-area {
   margin-right: auto;
   margin-left: 60px;
+  @include mq(mobile) {
+    margin-top: 70px;
+    margin-left: auto;
+  }
 }
 
 .l-footer__nav {
   @include flex(space-between, center);
+  @include mq(mobile) {
+    flex-direction: column;
+  }
 }
 
 .l-footer__nav-item + .l-footer__nav-item {
   margin-left: 40px;
+  @include mq(mobile) {
+    margin-top: 30px;
+    margin-left: 0;
+  }
 }
 
 .l-footer__nav-link {
@@ -51,6 +70,9 @@
 
 .l-footer__sns-nav {
   @include flex(space-between, center);
+  @include mq(mobile) {
+    margin-top: 70px;
+  }
 }
 
 .l-footer__sns-item + .l-footer__sns-item {
