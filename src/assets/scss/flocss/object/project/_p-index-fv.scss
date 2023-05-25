@@ -10,6 +10,11 @@
   background: url(/img/bg_shadow_blue.jpg) no-repeat center center;
   background-size: cover;
   @include flex(center, center);
+  @include mq(mobile) {
+    display: block;
+    min-height: auto;
+    background: $base-color-300;
+  }
 
   &::after {
     position: absolute;
@@ -22,6 +27,10 @@
     content: '';
     background: url(/img/fv_index.jpg) no-repeat center center;
     background-size: cover;
+    @include mq(mobile) {
+      width: 100%;
+      height: 276px;
+    }
   }
 }
 
@@ -36,22 +45,36 @@
   position: relative;
   z-index: calc($main-z-index + 1);
   width: fit-content;
+  @include mq(mobile) {
+    width: 100%;
+    padding-top: 290px;
+  }
 }
 
 .p-index-fv__copy {
-  font-size: rem(50);
+  font-size: fluid(30, 50);
   line-height: 1.2;
   letter-spacing: 0.06em;
 }
 
 .p-index-fv__sub-copy {
   margin-top: 40px;
-  font-size: rem(24);
+  font-size: fluid(16, 24);
   line-height: 1;
+  @include mq(mobile) {
+    margin-top: 6px;
+
+    > span {
+      display: block;
+      line-height: 1.5;
+    }
+  }
 }
 
 .p-index-fv__btn {
-  margin-top: 46px;
+  margin-top: fluid(20, 46);
+  @include mq(mobile) {
+  }
 }
 
 .p-index-fv__cta-btn {
@@ -93,6 +116,9 @@
   }
   @include hover(true) {
     transform: translateY(-14px);
+  }
+  @include mq(mobile) {
+    display: none;
   }
 }
 
