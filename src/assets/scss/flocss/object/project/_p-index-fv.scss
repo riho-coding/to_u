@@ -73,8 +73,6 @@
 
 .p-index-fv__btn {
   margin-top: fluid(20, 46);
-  @include mq(mobile) {
-  }
 }
 
 .p-index-fv__cta-btn {
@@ -87,7 +85,6 @@
   padding: 28px 30px;
   cursor: pointer;
   background-color: $main-color-100;
-  transition: transform $transition;
 
   &::before {
     position: absolute;
@@ -115,7 +112,7 @@
     background-size: contain;
   }
   @include hover(true) {
-    transform: translateY(-14px);
+    opacity: $opacity;
   }
   @include mq(mobile) {
     display: none;
