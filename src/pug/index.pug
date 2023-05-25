@@ -79,5 +79,28 @@ block main
 									span 使用目安：3ヶ月
 							a.c-product-card__btn 詳しくはこちら
 
+		//- Event
+		section.p-index-event
+			.p-index-event__outer
+				.p-index-event__inner
+					h2.c-title--center パーソナル診断の流れ
+					ol.p-index-event__step-list
+						li.p-index-event__step-item
+							figure.p-index-event__step-head(data-number="01")
+								img(src=[path] + "img/step_index_01.png" alt="ステップ1" width="1" height="1" decoding="async" loading="lazy")
+							p.p-index-event__step-body 診断を受ける
+							span.p-index-event__step-foot 3分程のオンライン美容分析診断を行い、あなたの肌の調子をチェックします。
+						li.p-index-event__step-item
+							figure.p-index-event__step-head(data-number="02")
+								img(src=[path] + "img/step_index_02.png" alt="ステップ1" width="1" height="1" decoding="async" loading="lazy")
+							p.p-index-event__step-body スキンケアセットの提案
+							span.p-index-event__step-foot 分析結果を元に、10,000通りの組み合わせからあなたに最適な化粧品をご提案します。
+						li.p-index-event__step-item
+							figure.p-index-event__step-head(data-number="03")
+								img(src=[path] + "img/step_index_03.png" alt="ステップ1" width="1" height="1" decoding="async" loading="lazy")
+							p.p-index-event__step-body 玄関先まで送付
+							span.p-index-event__step-foot 2週間以内に玄関先または郵便ボックスにスキンケアセットをお届けします。
+					a.p-index-event__btn.c-btn(href="/") 無料パーソナル診断を受けてみる
+
 block script
 	script(src=[path]+"js/main.bundle.js")
