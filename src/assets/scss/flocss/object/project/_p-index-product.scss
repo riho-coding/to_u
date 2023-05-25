@@ -1,0 +1,30 @@
+@use '../../global' as *;
+
+/**
+ * p-index-product
+ */
+
+.p-index-product {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.p-index-product__inner {
+  width: calc(100% - 12.5vw);
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-index-product__item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: 60px;
+  column-gap: fluid(20, 60);
+  margin-top: 20px;
+}
+
+.p-index-product__item {
+  flex: 1;
+  @include flex;
+}
