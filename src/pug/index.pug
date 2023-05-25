@@ -11,7 +11,7 @@ block main
 		//- FV
 		section.p-index-fv
 			.p-index-fv__inner
-				.p-index-fv__content
+				.p-index-fv__content#js-fv-trigger
 					h2.p-index-fv__copy わたし史上
 						br
 						| いちばん輝く素肌。
@@ -19,14 +19,14 @@ block main
 						span 肌質・体質に合わせた
 						span パーソナライズスキンケア
 					a.p-index-fv__btn.c-btn(href="/") 無料パーソナル診断を受けてみる
-				a.p-index-fv__cta-btn(href="/")
+				a.p-index-fv__cta-btn#js-cta-trigger(href="/")
 					span.p-index-fv__cta-title 無料パーソナル診断実施中
 					span.p-index-fv__cta-text 10,000通りの中からあなたに
 						br
 						| ぴったりのスキンケアをご提案します
 
 		//- Concept
-		section.p-index-concept
+		section.p-index-concept.js-fadeIn
 			.p-index-concept__inner
 				.p-index-concept__content
 					h2.c-title--left コンセプト
@@ -40,7 +40,7 @@ block main
 					img(src=[path] + "img/concept_index.jpg" alt="" width="590" height="513" decoding="async" loading="lazy")
 
 		//- Product
-		section.p-index-product
+		section.p-index-product.js-fadeIn
 			.p-index-product__inner
 				h2.c-title--center 商品一覧
 				ul.p-index-product__item-list
@@ -82,7 +82,7 @@ block main
 							a.c-product-card__btn 詳しくはこちら
 
 		//- Event
-		section.p-index-event
+		section.p-index-event.js-fadeIn
 			.p-index-event__outer
 				.p-index-event__inner
 					h2.c-title--center パーソナル診断の流れ
@@ -105,7 +105,7 @@ block main
 					a.p-index-event__btn.c-btn(href="/") 無料パーソナル診断を受けてみる
 
 		//- News
-		section.p-index-news
+		section.p-index-news.js-fadeIn
 			.p-index-news__inner
 				h2.c-title--center お知らせ
 				dl.p-index-news__list
@@ -124,7 +124,7 @@ block main
 				a.p-index-news__btn.c-btn(href="/") お知らせ一覧はこちら
 
 		//- Campaign
-		section.p-index-campaign
+		section.p-index-campaign.js-fadeIn
 			.p-index-campaign__inner
 				h2.c-title--center 初回限定価格
 				.p-index-campaign__head

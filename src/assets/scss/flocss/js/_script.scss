@@ -1,0 +1,41 @@
+@use '../global' as *;
+
+/**
+ * Intersection Observerを使った
+ * スクロール連動アニメーション
+ */
+
+// フェードインアニメーション
+.js-fadeIn {
+  transition: opacity 1s ease-out 0s, transform 0.6s ease 0s;
+  opacity: 0;
+  transform: translateY(120px);
+  &.-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * ページ遷移直後のアニメーション
+ */
+
+#js-fv-trigger {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity $transition, transform $transition;
+}
+
+#js-fv-trigger.-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#js-cta-trigger {
+  transform: translateX(150%);
+  transition: opacity $transition, transform 1s ease-out 0s;
+}
+
+#js-cta-trigger.-active {
+  transform: translateX(0);
+}
