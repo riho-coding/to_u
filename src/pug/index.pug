@@ -37,5 +37,47 @@ block main
 				figure.p-index-concept__img
 					img(src=[path] + "img/concept_index.jpg" alt="" width="590" height="513" decoding="async" loading="lazy")
 
+		//- Product
+		section.p-index-product
+			.p-index-product__inner
+				h2.c-title--center 商品一覧
+				ul.p-index-product__item-list
+					li.p-index-product__item
+						article.p-index-product__item-card.c-product-card
+							.c-product-card__head
+								figure.c-product-card__thumbnail
+									img(src=[path] + "img/product_item_01.jpg" alt="TO Uの商品、化粧水の画像" width="1" height="1" decoding="async" loading="lazy")
+								span.c-product-card__title 化粧水
+							.c-product-card__body
+								p.c-product-card__description 敏感肌、脂性肌、乾燥肌等あなたの肌の性質にあった水分量と油分量のバランスを整え、保水力と免疫力もアップします。
+								span.c-product-card__detail
+									span 内容量：200ml
+									span 使用目安：3ヶ月
+							a.c-product-card__btn 詳しくはこちら
+					li.p-index-product__item
+						article.p-index-product__item-card.c-product-card
+							.c-product-card__head
+								figure.c-product-card__thumbnail
+									img(src=[path] + "img/product_item_02.jpg" alt="TO Uの商品、美容クリームの画像" width="1" height="1" decoding="async" loading="lazy")
+								span.c-product-card__title 美容クリーム
+							.c-product-card__body
+								p.c-product-card__description 肌質に合わせた成分で、本来のしっとり柔らかな肌の再生、アンチエイジング効果もあります。
+								span.c-product-card__detail
+									span 内容量：60g
+									span 使用目安：3ヶ月
+							a.c-product-card__btn 詳しくはこちら
+					li.p-index-product__item
+						article.p-index-product__item-card.c-product-card
+							.c-product-card__head
+								figure.c-product-card__thumbnail
+									img(src=[path] + "img/product_item_03.jpg" alt="TO Uの商品、乳液の画像" width="1" height="1" decoding="async" loading="lazy")
+								span.c-product-card__title 乳液
+							.c-product-card__body
+								p.c-product-card__description 化粧水と美容クリームの後、潤いと美容成分を閉じ込めキープします。
+								span.c-product-card__detail
+									span 内容量：90g
+									span 使用目安：3ヶ月
+							a.c-product-card__btn 詳しくはこちら
+
 block script
 	script(src=[path]+"js/main.bundle.js")
