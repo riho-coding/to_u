@@ -28,7 +28,7 @@
     width: 56px;
     height: 8px;
     content: '';
-    background: url(/img/btn_arrow.png) no-repeat;
+    background: url('/img/btn_arrow.png') no-repeat;
     background-size: contain;
     transition: transform $transition;
   }
@@ -43,7 +43,7 @@
       right: 25px;
       width: 30px;
       height: 6px;
-      background: url(/img/btn_arrow_mobile.png) no-repeat;
+      background: url('/img/btn_arrow_mobile.png') no-repeat;
       background-size: contain;
     }
   }

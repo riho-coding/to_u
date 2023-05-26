@@ -7,7 +7,7 @@
 .p-index-fv {
   position: relative;
   min-height: 820px;
-  background: url(/img/bg_shadow_blue.jpg) no-repeat center center;
+  background: url('/img/bg_shadow_blue.jpg') no-repeat center center;
   background-size: cover;
   @include flex(center, center);
   @include mq(mobile) {
@@ -25,7 +25,7 @@
     width: 64%;
     height: 100%;
     content: '';
-    background: url(/img/fv_index.jpg) no-repeat center center;
+    background: url('/img/fv_index.jpg') no-repeat center center;
     background-size: cover;
     @include mq(mobile) {
       width: 100%;
@@ -95,7 +95,7 @@
     width: 80px;
     height: 80px;
     content: '';
-    background: url(/img/cta_point.png) no-repeat;
+    background: url('/img/cta_point.png') no-repeat;
     background-size: contain;
   }
 
@@ -108,7 +108,7 @@
     width: 70px;
     height: 128px;
     content: '';
-    background: url(/img/cta_mobile.png) no-repeat;
+    background: url('/img/cta_mobile.png') no-repeat;
     background-size: contain;
   }
   @include hover(true) {

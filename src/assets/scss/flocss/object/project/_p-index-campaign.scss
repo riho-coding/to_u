@@ -7,7 +7,7 @@
 .p-index-campaign {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: url(/img/bg_shadow.jpg) no-repeat;
+  background: url('/img/bg_shadow.jpg') no-repeat;
   background-size: cover;
   @include mq(mobile) {
     padding-top: 50px;
@@ -169,7 +169,7 @@
     width: 72px;
     height: 72px;
     content: '';
-    background: url(/img/campaign_point.png) no-repeat;
+    background: url('/img/campaign_point.png') no-repeat;
     background-size: contain;
   }
   @include mq(mobile) {
