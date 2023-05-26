@@ -1,0 +1,36 @@
+//- data/_data.pug
+
+//- headタグ内に記述する情報
+
+//- 全ページ共通情報
+-
+	const site = {
+		app_name: "",
+		crawl_and_index: "noindex, nofollow",
+		favicon_path: "favicon",
+		favicon_path_app: "apple-touch-icon.png",
+		url: "",
+		name: "TO U",
+		facebook_app_ID: "",
+		twitter_url: "",
+		twitter_user_ID: "",
+	};
+
+
+//- ページ別情報
+-
+	const meta = {
+		"home": {
+			slug: "/",
+			class: "home",
+			title: "【公式】TO U | トップページ",
+			color: "#8e8eae",
+			type: "website",
+			desc: "TOPページの説明",
+			path: "/",
+			img_path: "img/OGP.ong",
+			img_width: "1200",
+			img_height: "630",
+			twitter_card_size: "summary_large_image",
+		}
+	};
